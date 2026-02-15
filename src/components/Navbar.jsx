@@ -47,7 +47,7 @@ export default function Navbar() {
                             </div>
                         </div>
                         <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent">
-                            NexaDigital
+                            GoAdvance
                         </span>
                     </Link>
 

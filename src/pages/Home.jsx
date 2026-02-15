@@ -201,7 +201,14 @@ export default function Home() {
                                     transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
                                     className="absolute top-1/2 right-0 px-3 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
                                 >
-                                    <p className="text-xs font-medium text-gray-700 dark:text-gray-300">💰 PPC Ads</p>
+                                    <p className="text-xs font-medium text-gray-700 dark:text-gray-300">⭐ Influencer Marketing</p>
+                                </motion.div>
+                                <motion.div
+                                    animate={{ y: [-5, 15, -5] }}
+                                    transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                                    className="absolute top-10 left-10 px-3 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
+                                >
+                                    <p className="text-xs font-medium text-gray-700 dark:text-gray-300">📢 Meta Ads</p>
                                 </motion.div>
                             </div>
                         </motion.div>
