@@ -62,10 +62,10 @@ const growthData = [
 
 const channelEffectiveness = [
     { channel: 'SEO', percentage: 92, icon: Search, color: 'from-blue-500 to-blue-600' },
-    { channel: 'Email Marketing', percentage: 88, icon: Mail, color: 'from-emerald-500 to-emerald-600' },
+    { channel: 'Influencer Marketing', percentage: 88, icon: Mail, color: 'from-emerald-500 to-emerald-600' },
     { channel: 'Content Marketing', percentage: 85, icon: FileText, color: 'from-violet-500 to-violet-600' },
-    { channel: 'Social Media', percentage: 82, icon: Share2, color: 'from-pink-500 to-pink-600' },
-    { channel: 'PPC / Paid Ads', percentage: 78, icon: MousePointerClick, color: 'from-amber-500 to-amber-600' },
+    { channel: 'Social Media Handlind & Marketing', percentage: 82, icon: Share2, color: 'from-pink-500 to-pink-600' },
+    { channel: 'Meta ADS', percentage: 78, icon: MousePointerClick, color: 'from-amber-500 to-amber-600' },
 ]
 
 const caseStudies = [
