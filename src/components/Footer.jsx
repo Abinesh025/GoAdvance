@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Zap, ArrowUp, Mail, Phone, MapPin } from 'lucide-react'
-import { FaInstagram, FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
+import { FaInstagram, FaFacebookF, FaLinkedinIn} from 'react-icons/fa'
 import AnimatedSection from './AnimatedSection'
+import image from "../assets/image.png"
+import { MdOutlineMailOutline } from "react-icons/md";
 import { fadeInUp, staggerContainer, staggerItem } from '../utils/animationVariants'
+import logo from "../assets/icon.png"
 
 const quickLinks = [
     { name: 'Home', path: '/' },
@@ -14,19 +17,19 @@ const quickLinks = [
 ]
 
 const services = [
-    'Social Media Marketing',
+    'Social Media Marketing And Handling',
     'SEO Optimization',
-    'Google Ads / PPC',
-    'Website Development',
-    'Content Marketing',
-    'Email Marketing',
+    'Poster Desings',
+    'Influencer Marketing',
+    'Meta ADS',
+    'Website Development'
 ]
 
 const socialLinks = [
-    { icon: FaInstagram, href: '#', label: 'Instagram', color: 'hover:text-pink-500' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/goa.dvance?utm_source=qr&igsh=MWN5ZDh5OTIycHl1dg==', label: 'Instagram', color: 'hover:text-pink-500' },
     { icon: FaFacebookF, href: '#', label: 'Facebook', color: 'hover:text-blue-500' },
     { icon: FaLinkedinIn, href: '#', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon: FaTwitter, href: '#', label: 'Twitter', color: 'hover:text-sky-500' },
+    { icon:  MdOutlineMailOutline, href: '#', label: 'Email', color: 'hover:text-sky-500' },
 ]
 
 export default function Footer() {
@@ -43,16 +46,21 @@ export default function Footer() {
                 <AnimatedSection variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
                     {/* Brand Column */}
                     <motion.div variants={staggerItem} className="lg:col-span-1">
-                        <Link to="/" className="flex items-center gap-2 mb-4">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg shadow-primary-500/25">
-                                <Zap className="w-5 h-5 text-white" />
-                            </div>
-                            <span className="text-xl font-heading font-bold gradient-text">
-                                NexaDigital
-                            </span>
-                        </Link>
+                  
+                                 <Link to="/" className="flex items-center gap-2 group">
+                                                        <div className="relative">
+                                                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white-500 to-white-500 flex items-center justify-center shadow-lg shadow-white-500/25 group-hover:shadow-primary-500/40 transition-shadow duration-300">
+                                                                {/* <Zap className="w-5 h-5 text-white" /> */}
+                                                                <img src={image} alt="logo" className='rounded-lg' />
+                                                            </div>
+                                                        </div>
+                                                        <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent">
+                                                            GoAdvance
+                                                        </span>
+                                                    </Link>
+       
                         <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
-                            Helping businesses grow their online presence with smart digital marketing strategies that deliver real results.
+                            A student-led team helping businesses grow their online presence with smart, affordable digital marketing solutions that deliver real business growth.
                         </p>
                         <div className="flex items-center gap-3">
                             {socialLinks.map((social) => (
@@ -116,20 +124,20 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <Mail className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
-                                <a href="mailto:hello@nexadigital.com" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                                    hello@nexadigital.com
+                                <a href="mailto:goadvancedigitals@gmail.com" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                                    goadvancedigitals@gmail.com
                                 </a>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Phone className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
-                                <a href="tel:+919876543210" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-                                    +91 98765 43210
+                                <a href="tel:+9196003 01365" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                                    +91 96003 01365
                                 </a>
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-sm text-gray-600 dark:text-gray-400">
-                                    123 Business Park, Mumbai, India
+                                    Nagapattinam-611001, TamilNadu, India
                                 </span>
                             </li>
                         </ul>
@@ -141,7 +149,7 @@ export default function Footer() {
             <div className="border-t border-gray-200/50 dark:border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-gray-500 dark:text-gray-500">
-                        © {currentYear} NexaDigital. All rights reserved.
+                      Copyright  &copy; {currentYear} GoAdvance. All rights reserved.
                     </p>
                     <button
                         onClick={scrollToTop}

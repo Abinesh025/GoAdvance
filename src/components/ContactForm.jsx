@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
+import toast from 'react-hot-toast';
 
 const serviceOptions = [
-    'Social Media Marketing',
+    'Social Media Marketing And Handling',
     'SEO Optimization',
-    'Google Ads / PPC',
+    'Poster Designs',
+    'Influencer Marketing',
+    'Meta ADS',
     'Website Development',
-    'Content Marketing',
-    'Email Marketing',
     'Other',
 ]
 
@@ -44,6 +45,7 @@ export default function ContactForm() {
         // Simulate API call
         await new Promise((resolve) => setTimeout(resolve, 1500))
         setStatus('success')
+        toast.success("Message Sent SuccessFully")
         setFormData({ name: '', email: '', phone: '', service: '', message: '' })
         setTimeout(() => setStatus('idle'), 5000)
     }
@@ -132,7 +134,6 @@ export default function ContactForm() {
                     onChange={handleChange}
                     className={`${inputClasses('service')} cursor-pointer`}
                 >
-                    <option value="">Select a service</option>
                     {serviceOptions.map((s) => (
                         <option key={s} value={s}>{s}</option>
                     ))}
@@ -173,7 +174,7 @@ export default function ContactForm() {
             >
                 {status === 'sending' ? (
                     <>
-                        <Loader2 className="w-4 h-4 animate-spin" /> Sending...
+                        <Loader2 className="w-4 h-4 animate-spin" size={"lg"} /> Sending...
                     </>
                 ) : (
                     <>
@@ -183,19 +184,11 @@ export default function ContactForm() {
             </motion.button>
 
             {/* Status Messages */}
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {status === 'success' && (
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        className="flex items-center gap-2 p-4 rounded-xl bg-green-50 dark:bg-green-500/10 border border-green-200 dark:border-green-500/20 text-green-700 dark:text-green-400 text-sm"
-                    >
-                        <CheckCircle className="w-4 h-4 flex-shrink-0" />
-                        Thank you! Your message has been sent successfully. We'll get back to you soon.
-                    </motion.div>
+                    
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </form>
     )
 }

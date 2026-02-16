@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Zap } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
+import logo from "../assets/icon.png"
 
 const navLinks = [
     { name: 'Home', path: '/' },
@@ -13,6 +14,7 @@ const navLinks = [
 ]
 
 export default function Navbar() {
+  
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
     const location = useLocation()
@@ -42,8 +44,9 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 group">
                         <div className="relative">
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg shadow-primary-500/25 group-hover:shadow-primary-500/40 transition-shadow duration-300">
-                                <Zap className="w-5 h-5 text-white" />
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white-500 to-white-500 flex items-center justify-center shadow-lg shadow-white-500/25 group-hover:shadow-primary-500/40 transition-shadow duration-300">
+                                {/* <Zap className="w-5 h-5 text-white" /> */}
+                                <img src={logo} alt="logo" />
                             </div>
                         </div>
                         <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent">
@@ -76,7 +79,7 @@ export default function Navbar() {
 
                     {/* Right Side */}
                     <div className="flex items-center gap-3">
-                        <ThemeToggle />
+                       <ThemeToggle />
                         <Link
                             to="/contact"
                             className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 btn-glow"

@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { SiInfluxdb } from "react-icons/si";
 import {
-    Share2, Search, MousePointerClick, Globe, FileText, Mail,
-    ChevronRight, ArrowRight, Check,
-    MessageSquare, Target, Rocket, BarChart3, FileCheck
+    Share2, Search, MousePointerClick, Globe, FileText, Mail, PencilRuler,
+    ChevronRight, ArrowRight, Check, UserRoundCheck,
+    MessageSquare, Target, Rocket, BarChart3, FileCheck,
 } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import {
@@ -13,7 +14,7 @@ import {
 const servicesData = [
     {
         icon: Share2,
-        title: 'Social Media Marketing',
+        title: 'Social Media Marketing And Handling',
         description: 'Build a powerful social media presence that engages your audience and drives conversions. We manage your profiles, create compelling content, and run targeted ad campaigns.',
         whyImportant: [
             '3.6+ billion people use social media worldwide',
@@ -48,8 +49,43 @@ const servicesData = [
         ],
     },
     {
+        icon: PencilRuler,
+        title: 'Poster Designs',
+        description: 'Eye-catching and creative poster designs that communicate your message clearly, strengthen brand identity, and capture attention both online and offline.',
+        whyImportant: [
+            'Enhances brand visibility',
+            'Grabs audience attention instantly',
+            'Communicates offers clearly',
+            'Strengthens brand identity',
+        ],
+        whatWeDo: [
+            'Custom poster concept & design',
+            'Social media promotional posters',
+            'Event & campaign posters',
+            'Print-ready high-resolution designs',
+            'Brand-consistent visual styling',
+        ],
+    }, {
+        icon: UserRoundCheck,
+        title: 'Influencer Marketing',
+        description: 'Collaborate with trusted influencers to amplify your brand message, reach targeted audiences, and build authentic connections that drive engagement and sales.',
+        whyImportant: [
+            'Builds instant trust through social proof',
+            'Expands brand reach to niche audiences',
+            'Boosts engagement and brand awareness',
+            'Drives high-converting traffic',
+        ],
+        whatWeDo: [
+            'Influencer research & selection',
+            'Campaign strategy & planning',
+            'Content collaboration & approvals',
+            'Performance tracking & reporting',
+            'ROI analysis & campaign optimization',
+        ],
+    },
+    {
         icon: MousePointerClick,
-        title: 'Google Ads / PPC',
+        title: 'Meta ADS / PPC',
         description: 'Get instant visibility at the top of search results with targeted pay-per-click campaigns. We maximize your ad spend to deliver the highest possible ROI.',
         whyImportant: [
             'Immediate results and traffic',
@@ -82,43 +118,9 @@ const servicesData = [
             'WordPress development & customization',
             'Website maintenance & support',
         ],
-    },
-    {
-        icon: FileText,
-        title: 'Content Marketing',
-        description: 'Engage your audience with valuable, relevant content that establishes your expertise and drives organic traffic to your business.',
-        whyImportant: [
-            'Content marketing generates 3x more leads than traditional marketing',
-            'Builds thought leadership and brand authority',
-            'Supports SEO strategy with fresh, relevant content',
-            'Educates and nurtures potential customers',
-        ],
-        whatWeDo: [
-            'Blog writing & content strategy',
-            'Video content production',
-            'Infographic design & creation',
-            'Social media content creation',
-            'Content calendar planning & management',
-        ],
-    },
-    {
-        icon: Mail,
-        title: 'Email Marketing',
-        description: 'Stay connected with your audience through targeted email campaigns that nurture leads, drive sales, and build lasting customer relationships.',
-        whyImportant: [
-            'Email generates $36 for every $1 spent',
-            "Direct access to your audience's inbox",
-      'Highly personalizable and segmentable',
-            'Automated sequences save time and effort',
-        ],
-        whatWeDo: [
-            'Email list building & segmentation',
-            'Newsletter design & creation',
-            'Automated drip campaigns & sequences',
-            'A/B testing for subject lines & content',
-            'Performance tracking & optimization',
-        ],
-    },
+    }
+
+
 ]
 
 const processSteps = [
@@ -141,11 +143,11 @@ export default function Services() {
                             <ChevronRight className="w-3.5 h-3.5" />
                             <span className="text-primary-600 dark:text-primary-400">Services</span>
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-4">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-4">
                             Our <span className="gradient-text">Services</span>
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-                            Comprehensive digital marketing solutions designed to help your business grow, attract more customers, and achieve lasting success.
+                            Strategic digital marketing solutions designed to help your business grow and build a strong online presence.
                         </p>
                     </motion.div>
                 </div>
@@ -162,11 +164,11 @@ export default function Services() {
                             <div className={`grid lg:grid-cols-2 gap-12 items-start ${index % 2 === 1 ? 'lg:direction-rtl' : ''}`}>
                                 {/* Content Side */}
                                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                                    <div className="flex items-center gap-4 mb-6">
+                                    <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
                                         <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/25">
                                             <service.icon className="w-6 h-6 text-white" />
                                         </div>
-                                        <h2 className="text-2xl sm:text-3xl font-heading font-bold text-gray-900 dark:text-white">
+                                        <h2 className="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-gray-900 dark:text-white">
                                             {service.title}
                                         </h2>
                                     </div>

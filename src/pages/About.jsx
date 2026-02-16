@@ -8,6 +8,7 @@ import AnimatedSection from '../components/AnimatedSection'
 import {
     fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem
 } from '../utils/animationVariants'
+import logo from "../assets/logo.jpeg";
 
 const values = [
     { icon: Eye, title: 'Transparency', description: 'We believe in open communication and keep our clients informed at every step.' },
@@ -61,13 +62,13 @@ export default function About() {
                             </h2>
                             <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                                 <p>
-                                    NexaDigital was founded with a simple yet powerful vision: to make professional digital marketing accessible to businesses of all sizes. We believe every brand has a story worth telling, and we're here to help you tell it to the world.
+                                  Aoadvance Digital Marketing was founded with a clear mission — to help businesses grow in the digital world through smart, effective, and affordable marketing solutions. We believe every business deserves a strong online presence, and our goal is to turn your ideas into impactful digital success.
                                 </p>
                                 <p>
-                                    Our team of passionate marketers, designers, and strategists works tirelessly to craft campaigns that not only look great but deliver measurable results. From startups to established brands, we've helped businesses across industries grow their online presence and achieve their goals.
+                                Our team of creative marketers, designers, and strategists focuses on building powerful campaigns that not only attract attention but also generate real results. From startups to growing businesses, we support brands in increasing visibility, engaging their audience, and achieving long-term growth.
                                 </p>
                                 <p>
-                                    What sets us apart is our commitment to transparency, data-driven decisions, and genuine partnerships with our clients. When you work with NexaDigital, you're not just getting a service provider — you're gaining a dedicated growth partner.
+                                   What makes Aoadvance Digital Marketing different is our focus on innovation, data-driven strategies, and strong client relationships. When you partner with us, you gain a committed team dedicated to helping your business succeed and grow continuously.
                                 </p>
                             </div>
                         </AnimatedSection>
@@ -76,9 +77,17 @@ export default function About() {
                             <div className="relative">
                                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-500/10 dark:to-primary-700/10 flex items-center justify-center overflow-hidden">
                                     <div className="text-center p-8">
-                                        <div className="text-8xl mb-4">🏢</div>
-                                        <h3 className="text-xl font-heading font-semibold text-gray-800 dark:text-white mb-2">NexaDigital HQ</h3>
-                                        <p className="text-sm text-gray-600 dark:text-gray-400">Where creativity meets strategy</p>
+                                        <div className="absolute inset-16 rounded-full bg-gradient-to-br from-primary-500/20 to-primary-700/20 dark:from-primary-500/10 dark:to-primary-700/10 backdrop-blur-sm flex items-center justify-center">
+                                            <div className="text-center p-8">
+                                                <div className="text-6xl mb-4 rounded-full border-2 border-solid border-primary-200 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200 btn-glow pointer">
+                                                    <img src={logo} alt="Logo" className='rounded-full' width={250} height={250}/>
+                                                    
+                                                </div>
+                                                <p className="text-sm text-gray-600 dark:text-gray-400">Where creativity meets strategy</p>
+                                            </div>
+                                            
+                                        </div>
+                                    
                                     </div>
                                 </div>
                                 {/* Decorative */}

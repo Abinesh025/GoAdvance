@@ -10,35 +10,36 @@ import ContactForm from '../components/ContactForm'
 import {
     fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem
 } from '../utils/animationVariants'
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const contactInfo = [
     {
         icon: Mail,
         title: 'Email Us',
-        value: 'hello@nexadigital.com',
-        href: 'mailto:hello@nexadigital.com',
+        value: 'goadvancedigitals@gmail.com',
+        href: 'mailto:goadvancedigitals@gmail.com',
         description: 'We respond within 24 hours',
     },
     {
         icon: Phone,
         title: 'Call Us',
-        value: '+91 98765 43210',
-        href: 'tel:+919876543210',
-        description: 'Mon-Sat, 9 AM - 7 PM IST',
+        value: '+91 96003 01365',
+        href: 'tel:+9196003 01365',
+        description: '24 / 7',
     },
     {
         icon: MapPin,
         title: 'Visit Us',
-        value: '123 Business Park, Mumbai',
+        value: 'Nagapattinam, TamilNadu',
         href: '#',
-        description: 'By appointment only',
+        description: '',
     },
     {
         icon: Clock,
         title: 'Working Hours',
-        value: 'Mon - Sat: 9AM - 7PM',
+        value: '24 / 7',
         href: null,
-        description: 'Sunday closed',
+        description: '',
     },
 ]
 
@@ -54,7 +55,7 @@ export default function Contact() {
                             <ChevronRight className="w-3.5 h-3.5" />
                             <span className="text-primary-600 dark:text-primary-400">Contact</span>
                         </div>
-                        <h1 className="text-4xl sm:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-4">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-4">
                             Get in <span className="gradient-text">Touch</span>
                         </h1>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
@@ -119,7 +120,7 @@ export default function Contact() {
                             {/* Quick Contact Buttons */}
                             <AnimatedSection variants={fadeInRight} className="space-y-3 pt-4">
                                 <a
-                                    href="https://wa.me/919876543210?text=Hi%2C%20I'm%20interested%20in%20your%20digital%20marketing%20services."
+                                    href="https://wa.me/919600301365?text=Hi%2C%20I'm%20interested%20in%20your%20digital%20marketing%20services."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center gap-3 w-full py-3.5 rounded-xl text-sm font-semibold text-white bg-green-500 hover:bg-green-600 shadow-lg shadow-green-500/25 hover:shadow-green-500/40 transition-all duration-300"
@@ -127,7 +128,7 @@ export default function Contact() {
                                     <FaWhatsapp className="w-5 h-5" /> Chat on WhatsApp
                                 </a>
                                 <a
-                                    href="mailto:hello@nexadigital.com"
+                                    href="mailto:goadvancedigitals@gmail.com"
                                     className="flex items-center justify-center gap-3 w-full py-3.5 rounded-xl text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-dark-200 hover:bg-gray-200 dark:hover:bg-dark-300 border border-gray-200 dark:border-white/5 transition-all duration-300"
                                 >
                                     <Mail className="w-4 h-4" /> Send an Email
@@ -142,6 +143,7 @@ export default function Contact() {
                                         { icon: FaInstagram, href: '#', label: 'Instagram', hover: 'hover:bg-pink-500 hover:text-white' },
                                         { icon: FaFacebookF, href: '#', label: 'Facebook', hover: 'hover:bg-blue-600 hover:text-white' },
                                         { icon: FaLinkedinIn, href: '#', label: 'LinkedIn', hover: 'hover:bg-blue-700 hover:text-white' },
+                                        { icon: MdOutlineMailOutline, href: '#', label: 'Email', color: 'hover:text-sky-500' },
                                     ].map((social) => (
                                         <a
                                             key={social.label}
@@ -167,8 +169,8 @@ export default function Contact() {
                     <AnimatedSection variants={fadeInUp}>
                         <div className="rounded-2xl overflow-hidden border border-gray-200/60 dark:border-white/5 h-80">
                             <iframe
-                                title="NexaDigital Office Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1707900000000!5m2!1sen!2sin"
+                                title="GoAdvance Location"
+                                src="https://www.google.com/maps?q=Nagapattinam,Tamil%20Nadu&output=embed"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}

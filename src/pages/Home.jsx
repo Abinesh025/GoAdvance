@@ -4,18 +4,20 @@ import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import {
     Share2, Search, MousePointerClick, Globe, FileText, Mail,
-    Shield, DollarSign, Users, Headphones, ArrowRight, ChevronDown
+    UserRoundCheck,PencilRuler,
+    Shield, DollarSign, Users, Headphones, ArrowRight, ChevronDown,
 } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import ServiceCard from '../components/ServiceCard'
 import {
     fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem
-} from '../utils/animationVariants'
+} from '../utils/animationVariants';
+import logo from "../assets/logo.jpeg";
 
 const services = [
     {
         icon: Share2,
-        title: 'Social Media Marketing',
+        title: 'Social Media Marketing And Handling',
         description: 'Build your brand presence across all social platforms with engaging content and strategic campaigns that drive real engagement.',
     },
     {
@@ -24,25 +26,25 @@ const services = [
         description: 'Rank higher on Google and drive organic traffic with our proven SEO strategies including on-page, off-page, and technical SEO.',
     },
     {
+        icon: PencilRuler,
+        title: 'Poster Designs',
+        description: 'Creative and eye-catching poster designs that showcase your brand message clearly and attract attention across digital and print platforms.',
+    },
+    {
+        icon: UserRoundCheck,
+        title: 'Influencer Marketing',
+        description: 'Expand your brand reach by collaborating with trusted influencers who connect your business with the right audience and drive authentic engagement.',
+    },
+    {
         icon: MousePointerClick,
-        title: 'Google Ads / PPC',
+        title: 'Meta ADS',
         description: 'Get instant visibility with targeted pay-per-click campaigns that deliver measurable ROI and qualified leads to your business.',
     },
     {
         icon: Globe,
         title: 'Website Development',
         description: 'Launch stunning, fast, and responsive websites that convert visitors into customers. Modern design meets powerful functionality.',
-    },
-    {
-        icon: FileText,
-        title: 'Content Marketing',
-        description: 'Engage your audience with compelling content that tells your brand story and drives conversions through blogs, videos, and more.',
-    },
-    {
-        icon: Mail,
-        title: 'Email Marketing',
-        description: 'Nurture leads and retain customers with personalized email campaigns that deliver the right message at the right time.',
-    },
+    }
 ]
 
 const whyChooseUs = [
@@ -57,23 +59,18 @@ const whyChooseUs = [
         description: 'Premium quality digital marketing services at competitive prices that fit every budget.',
     },
     {
-        icon: Users,
-        title: 'Expert Team',
-        description: 'Our team of certified professionals brings years of experience across all digital channels.',
-    },
-    {
         icon: Headphones,
         title: '24/7 Support',
         description: 'Round-the-clock support to ensure your campaigns run smoothly and your questions are answered.',
     },
 ]
 
-const stats = [
-    { value: 150, suffix: '+', label: 'Projects Completed' },
-    { value: 120, suffix: '+', label: 'Happy Clients' },
-    { value: 5, suffix: '+', label: 'Years Experience' },
-    { value: 6, suffix: '', label: 'Services Offered' },
-]
+// const stats = [
+//     { value: 150, suffix: '+', label: 'Projects Completed' },
+//     { value: 120, suffix: '+', label: 'Happy Clients' },
+//     { value: 5, suffix: '+', label: 'Years Experience' },
+//     { value: 6, suffix: '', label: 'Services Offered' },
+// ]
 
 function StatCounter({ value, suffix, label }) {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
@@ -107,14 +104,14 @@ export default function Home() {
                                 transition={{ delay: 0.2 }}
                                 className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 border border-primary-200 dark:border-primary-500/20 mb-6"
                             >
-                                🚀 #1 Digital Marketing Agency
+                                ⚡ Next-Gen Digital Marketing Agency
                             </motion.span>
 
                             <motion.h1
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.3 }}
-                                className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-gray-900 dark:text-white mb-6"
+                                className="text-4xl sm:text-5xl lg:text-5xl font-heading font-bold leading-tight text-gray-900 dark:text-white mb-6"
                             >
                                 Grow Your Business with{' '}
                                 <span className="gradient-text">Smart Digital Marketing</span>
@@ -137,9 +134,9 @@ export default function Home() {
                             >
                                 <Link
                                     to="/contact"
-                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 btn-glow"
+                                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 btn-glow"
                                 >
-                                    Get Free Consultation <ArrowRight className="w-4 h-4" />
+                                    Get In Touch <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <Link
                                     to="/portfolio"
@@ -157,7 +154,7 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
                             className="hidden lg:block relative"
                         >
-                            <div className="relative w-full aspect-square max-w-lg mx-auto">
+                            <div className="relative w-[90%] aspect-square max-w-lg mx-auto">
                                 {/* Animated circles */}
                                 <motion.div
                                     animate={{ rotate: 360 }}
@@ -173,9 +170,9 @@ export default function Home() {
                                 {/* Center content */}
                                 <div className="absolute inset-16 rounded-full bg-gradient-to-br from-primary-500/20 to-primary-700/20 dark:from-primary-500/10 dark:to-primary-700/10 backdrop-blur-sm flex items-center justify-center">
                                     <div className="text-center p-8">
-                                        <div className="text-6xl mb-4">📈</div>
-                                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Growth Driven</p>
-                                        <p className="text-xs text-gray-500 dark:text-gray-500">Marketing Solutions</p>
+                                        <div className="text-6xl mb-4 rounded-full border-2 border-solid border-primary-200 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200 btn-glow pointer"><img src={logo} alt="Logo" className='rounded-full' width={250} height={250}/></div>
+                                        {/* <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Future Ready</p>
+                                        <p className="text-xs text-gray-500 dark:text-gray-500">Business Solutions</p> */}
                                     </div>
                                 </div>
 
@@ -183,7 +180,7 @@ export default function Home() {
                                 <motion.div
                                     animate={{ y: [-10, 10, -10] }}
                                     transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                                    className="absolute top-10 right-10 px-3 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
+                                    className="absolute top-10 right-10 px-2 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
                                 >
                                     <p className="text-xs font-medium text-gray-700 dark:text-gray-300">📱 Social Media</p>
                                 </motion.div>
@@ -191,7 +188,7 @@ export default function Home() {
                                 <motion.div
                                     animate={{ y: [10, -10, 10] }}
                                     transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                                    className="absolute bottom-20 left-0 px-3 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
+                                    className="absolute bottom-20 left-0 px-2 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
                                 >
                                     <p className="text-xs font-medium text-gray-700 dark:text-gray-300">🔍 SEO Ready</p>
                                 </motion.div>
@@ -199,14 +196,14 @@ export default function Home() {
                                 <motion.div
                                     animate={{ y: [-5, 15, -5] }}
                                     transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                                    className="absolute top-1/2 right-0 px-3 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
+                                    className="absolute bottom-20 right-0 px-2 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
                                 >
                                     <p className="text-xs font-medium text-gray-700 dark:text-gray-300">⭐ Influencer Marketing</p>
                                 </motion.div>
                                 <motion.div
                                     animate={{ y: [-5, 15, -5] }}
                                     transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                                    className="absolute top-10 left-10 px-3 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
+                                    className="absolute top-10 left-10 px-2 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
                                 >
                                     <p className="text-xs font-medium text-gray-700 dark:text-gray-300">📢 Meta Ads</p>
                                 </motion.div>
@@ -244,7 +241,7 @@ export default function Home() {
                             Our <span className="gradient-text">Services</span>
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            Comprehensive digital marketing solutions tailored to help your business grow and succeed in the digital landscape.
+                           Strategic digital marketing solutions designed to help your business grow and build a strong online presence.
                         </p>
                     </AnimatedSection>
 
@@ -267,11 +264,11 @@ export default function Home() {
                             Why <span className="gradient-text">Choose Us?</span>
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            We're committed to delivering exceptional results that help your business thrive in the competitive digital world.
+                            We are dedicated to delivering reliable digital solutions that help your business grow and stand out online.
                         </p>
                     </AnimatedSection>
 
-                    <AnimatedSection variants={staggerContainer} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <AnimatedSection variants={staggerContainer} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {whyChooseUs.map((item, index) => (
                             <motion.div
                                 key={item.title}
@@ -294,17 +291,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Stats Section */}
-            <section className="py-20 lg:py-28">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <AnimatedSection variants={staggerContainer} className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-                        {stats.map((stat) => (
-                            <StatCounter key={stat.label} {...stat} />
-                        ))}
-                    </AnimatedSection>
-                </div>
-            </section>
-
             {/* CTA Section */}
             <section className="py-20 lg:py-28">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -321,14 +307,14 @@ export default function Home() {
                                 Ready to Grow Your Business?
                             </h2>
                             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-                                Book your free consultation now and discover how we can help you achieve your digital marketing goals.
+                              Schedule a free consultation and explore how we can support your digital growth journey.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link
                                     to="/contact"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-semibold text-primary-600 bg-white hover:bg-gray-100 shadow-lg transition-all duration-300"
                                 >
-                                    Get Started Today <ArrowRight className="w-4 h-4" />
+                                    Get In Touch<ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
                                     href="https://wa.me/919876543210"
@@ -336,7 +322,7 @@ export default function Home() {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-semibold text-white border-2 border-white/30 hover:bg-white/10 transition-all duration-300"
                                 >
-                                    WhatsApp Us
+                                    Connect with  WhatsApp
                                 </a>
                             </div>
                         </div>
