@@ -37,24 +37,38 @@ export default function ContactForm() {
         return Object.keys(newErrors).length === 0
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        if (!validateForm()) return
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
+    //     if (!validateForm()) return
 
-        setStatus('sending')
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500))
-        setStatus('success')
-        toast.success("Message Sent SuccessFully")
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' })
-        setTimeout(() => setStatus('idle'), 5000)
-    }
+    //     setStatus('sending')
+    //     // Simulate API call
+    //     await new Promise((resolve) => setTimeout(resolve, 1500))
+    //     setStatus('success')
+    //     toast.success("Message Sent SuccessFully")
+    //     setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+    //     setTimeout(() => setStatus('idle'), 5000)
+    // }
 
     const handleChange = (e) => {
         const { name, value } = e.target
         setFormData((prev) => ({ ...prev, [name]: value }))
         if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }))
+              const [result, setResult] = useState("");
     }
+    const onSubmit = async (event) => {
+        event.preventDefault();
+    const formData = new FormData(event.target);
+        formData.append("access_key", "8fe8aa90-24a5-434d-b934-2553856d5465");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+      
+    });
+     toast.success("Message Sent SuccessFully");
+  
+  };
 
     const inputClasses = (field) =>
         `w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-200 border ${errors[field]
@@ -63,7 +77,7 @@ export default function ContactForm() {
         } text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 outline-none transition-all duration-300 text-sm`
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={onSubmit}  className="space-y-5">
             {/* Name */}
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">

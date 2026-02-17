@@ -65,12 +65,6 @@ const whyChooseUs = [
     },
 ]
 
-// const stats = [
-//     { value: 150, suffix: '+', label: 'Projects Completed' },
-//     { value: 120, suffix: '+', label: 'Happy Clients' },
-//     { value: 5, suffix: '+', label: 'Years Experience' },
-//     { value: 6, suffix: '', label: 'Services Offered' },
-// ]
 
 function StatCounter({ value, suffix, label }) {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 })
@@ -134,13 +128,13 @@ export default function Home() {
                             >
                                 <Link
                                     to="/contact"
-                                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 btn-glow"
+                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 btn-glow"
                                 >
                                     Get In Touch <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <Link
                                     to="/portfolio"
-                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-dark-200 hover:bg-gray-200 dark:hover:bg-dark-300 border border-gray-200 dark:border-white/5 transition-all duration-300"
+                                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-primary-700 dark:text-gray-300 bg-gray-100 dark:bg-dark-200 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 border-2 border-primary-600 dark:border-white/5 transition-all duration-300"
                                 >
                                     View Our Work
                                 </Link>
@@ -168,11 +162,11 @@ export default function Home() {
                                 />
 
                                 {/* Center content */}
-                                <div className="absolute inset-16 rounded-full bg-gradient-to-br from-primary-500/20 to-primary-700/20 dark:from-primary-500/10 dark:to-primary-700/10 backdrop-blur-sm flex items-center justify-center">
+                                <div className="absolute inset-16 rounded-full bg-gradient-to-br from-primary-500/20    to-primary-700/20 dark:from-primary-500/10 dark:to-primary-700/10 backdrop-blur-sm flex items-center justify-center">
                                     <div className="text-center p-8">
-                                        <div className="text-6xl mb-4 rounded-full border-2 border-solid border-primary-200 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200 btn-glow pointer"><img src={logo} alt="Logo" className='rounded-full' width={250} height={250}/></div>
-                                        {/* <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Future Ready</p>
-                                        <p className="text-xs text-gray-500 dark:text-gray-500">Business Solutions</p> */}
+                                        <div className="text-6xl mb-2 rounded-full border-2 border-solid border-primary-200 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-200 btn-glow pointer">
+                                            <img src={logo} alt="Logo" className='rounded-full' width={250} height={250}/>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -196,7 +190,7 @@ export default function Home() {
                                 <motion.div
                                     animate={{ y: [-5, 15, -5] }}
                                     transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                                    className="absolute bottom-20 right-0 px-2 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
+                                    className="absolute bottom-20 right-[-8%] px-1 py-2 rounded-xl bg-white dark:bg-dark-100 shadow-lg shadow-black/5 dark:shadow-black/20 border border-gray-200/50 dark:border-white/5"
                                 >
                                     <p className="text-xs font-medium text-gray-700 dark:text-gray-300">⭐ Influencer Marketing</p>
                                 </motion.div>

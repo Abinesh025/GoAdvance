@@ -3,10 +3,11 @@ import { motion } from 'framer-motion'
 import { Zap, ArrowUp, Mail, Phone, MapPin } from 'lucide-react'
 import { FaInstagram, FaFacebookF, FaLinkedinIn} from 'react-icons/fa'
 import AnimatedSection from './AnimatedSection'
-import image from "../assets/image.png"
+import blacklogo from "../assets/blacklogo.png"
+import whitelogo from "../assets/whitelogo.png";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { fadeInUp, staggerContainer, staggerItem } from '../utils/animationVariants'
-import logo from "../assets/icon.png"
+
 
 const quickLinks = [
     { name: 'Home', path: '/' },
@@ -50,11 +51,10 @@ export default function Footer() {
                                  <Link to="/" className="flex items-center gap-2 group">
                                                         <div className="relative">
                                                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white-500 to-white-500 flex items-center justify-center shadow-lg shadow-white-500/25 group-hover:shadow-primary-500/40 transition-shadow duration-300">
-                                                                {/* <Zap className="w-5 h-5 text-white" /> */}
-                                                                <img src={image} alt="logo" className='rounded-lg' />
+                                                            <img src={blacklogo} alt='theme' />
                                                             </div>
                                                         </div>
-                                                        <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent">
+                                                        <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent bottom-5">
                                                             GoAdvance
                                                         </span>
                                                     </Link>

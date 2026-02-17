@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Zap } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
-import logo from "../assets/icon.png"
+import blacklogo from "../assets/blacklogo.png";
+import whitelogo from "../assets/whitelogo.png"
 
 const navLinks = [
     { name: 'Home', path: '/' },
@@ -15,9 +16,11 @@ const navLinks = [
 
 export default function Navbar() {
   
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState("white")
+    const [isToggle,setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false)
     const location = useLocation()
+    const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -28,6 +31,11 @@ export default function Navbar() {
     useEffect(() => {
         setIsOpen(false)
     }, [location])
+    const changeToggle = ()=>{
+            
+        !setToggle("dark")
+    
+    }
 
     return (
         <motion.nav
@@ -45,8 +53,7 @@ export default function Navbar() {
                     <Link to="/" className="flex items-center gap-2 group">
                         <div className="relative">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white-500 to-white-500 flex items-center justify-center shadow-lg shadow-white-500/25 group-hover:shadow-primary-500/40 transition-shadow duration-300">
-                                {/* <Zap className="w-5 h-5 text-white" /> */}
-                                <img src={logo} alt="logo" />
+                                <img src={isDark ? whitelogo :blacklogo} alt="Logo" className="h-10" />
                             </div>
                         </div>
                         <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent">
@@ -79,10 +86,10 @@ export default function Navbar() {
 
                     {/* Right Side */}
                     <div className="flex items-center gap-3">
-                       <ThemeToggle />
+                       <button onClick={() => setIsDark(!isDark)}><ThemeToggle /></button>
                         <Link
                             to="/contact"
-                            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 btn-glow"
+                            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 shadow-lg shadow-primary-500/25 hover:shadow-black-400/40 transition-all duration-300 btn-glow"
                         >
                             Get Started
                         </Link>
