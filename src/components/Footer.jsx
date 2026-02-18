@@ -30,9 +30,7 @@ const socialLinks = [
     { icon: FaInstagram, href: 'https://www.instagram.com/goadvance_digitals?igsh=MWN5ZDh5OTIycHl1dg==', label: 'Instagram', color: 'hover:text-pink-500' },
     { icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61588342142585', label: 'Facebook', color: 'hover:text-blue-500' },
     { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/goadvance-digitals-0800313b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon:  MdOutlineMailOutline, href: 'mailto:goadvancedigitals@gmail.com', label: 'Email', color: 'hover:text-sky-500' },
 ]
-
 export default function Footer() {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
