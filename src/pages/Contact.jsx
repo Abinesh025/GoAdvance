@@ -31,7 +31,7 @@ const contactInfo = [
         icon: MapPin,
         title: 'Visit Us',
         value: 'Nagapattinam, TamilNadu',
-        href: '#',
+        href: 'https://www.google.com/maps/place/Nagapattinam,+Tamil+Nadu/@10.7794929,79.7814461,13z/data=!3m1!4b1!4m6!3m5!1s0x3a556c9797ef6927:0xc869efbb726e6072!8m2!3d10.7672313!4d79.8448512!16zL20vMDJ0bDQy?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D',
         description: '',
     },
     {

@@ -27,10 +27,10 @@ const services = [
 ]
 
 const socialLinks = [
-    { icon: FaInstagram, href: 'https://www.instagram.com/goa.dvance?utm_source=qr&igsh=MWN5ZDh5OTIycHl1dg==', label: 'Instagram', color: 'hover:text-pink-500' },
-    { icon: FaFacebookF, href: '#', label: 'Facebook', color: 'hover:text-blue-500' },
-    { icon: FaLinkedinIn, href: '#', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon:  MdOutlineMailOutline, href: '#', label: 'Email', color: 'hover:text-sky-500' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/goadvance_digitals?igsh=MWN5ZDh5OTIycHl1dg==', label: 'Instagram', color: 'hover:text-pink-500' },
+    { icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61588342142585', label: 'Facebook', color: 'hover:text-blue-500' },
+    { icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/goadvance-digitals-0800313b2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', label: 'LinkedIn', color: 'hover:text-blue-600' },
+    { icon:  MdOutlineMailOutline, href: 'mailto:goadvancedigitals@gmail.com', label: 'Email', color: 'hover:text-sky-500' },
 ]
 
 export default function Footer() {
@@ -43,17 +43,12 @@ export default function Footer() {
     return (
         <footer className="relative bg-gray-50 dark:bg-dark-100 border-t border-gray-200/50 dark:border-white/5">
             {/* Main Footer Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8 py-16 ">
                 <AnimatedSection variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
                     {/* Brand Column */}
                     <motion.div variants={staggerItem} className="lg:col-span-1">
                   
                                  <Link to="/" className="flex items-center gap-2 group">
-                                                        <div className="relative">
-                                                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-white-500 to-white-500 flex items-center justify-center shadow-lg shadow-white-500/25 group-hover:shadow-primary-500/40 transition-shadow duration-300">
-                                                            <img src={blacklogo} alt='theme' />
-                                                            </div>
-                                                        </div>
                                                         <span className="text-xl font-heading font-bold bg-gradient-to-r from-primary-600 to-primary-400 dark:from-primary-400 dark:to-blue-300 bg-clip-text text-transparent bottom-5">
                                                             GoAdvance
                                                         </span>
@@ -136,9 +131,9 @@ export default function Footer() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
-                                <span className="text-sm text-gray-600 dark:text-gray-400">
-                                    Nagapattinam-611001, TamilNadu, India
-                                </span>
+                                <a href="https://www.google.com/maps/place/Nagapattinam,+Tamil+Nadu/@10.7794929,79.7814461,13z/data=!3m1!4b1!4m6!3m5!1s0x3a556c9797ef6927:0xc869efbb726e6072!8m2!3d10.7672313!4d79.8448512!16zL20vMDJ0bDQy?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
+                                  Nagapattinam-611001, TamilNadu, India
+                                </a>
                             </li>
                         </ul>
                     </motion.div>

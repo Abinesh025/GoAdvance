@@ -311,7 +311,7 @@ export default function Home() {
                                     Get In Touch<ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <a
-                                    href="https://wa.me/919876543210"
+                                    href="https://wa.me/919600301365?text=Hi%2C%20I'm%20interested%20in%20your%20digital%20marketing%20services."
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-sm font-semibold text-white border-2 border-white/30 hover:bg-white/10 transition-all duration-300"

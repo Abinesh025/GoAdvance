@@ -21,7 +21,9 @@ export default function ContactForm() {
         service: '',
         message: '',
     })
+
     const [errors, setErrors] = useState({})
+
     const [status, setStatus] = useState('idle') // idle | sending | success | error
 
     const validateForm = () => {
@@ -37,18 +39,6 @@ export default function ContactForm() {
         return Object.keys(newErrors).length === 0
     }
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault()
-    //     if (!validateForm()) return
-
-    //     setStatus('sending')
-    //     // Simulate API call
-    //     await new Promise((resolve) => setTimeout(resolve, 1500))
-    //     setStatus('success')
-    //     toast.success("Message Sent SuccessFully")
-    //     setFormData({ name: '', email: '', phone: '', service: '', message: '' })
-    //     setTimeout(() => setStatus('idle'), 5000)
-    // }
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -60,14 +50,12 @@ export default function ContactForm() {
         event.preventDefault();
     const formData = new FormData(event.target);
         formData.append("access_key", "8fe8aa90-24a5-434d-b934-2553856d5465");
-
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData
       
     });
-     toast.success("Message Sent SuccessFully");
-  
+    toast.success("Message Sent SuccessFully");
   };
 
     const inputClasses = (field) =>
@@ -196,13 +184,6 @@ export default function ContactForm() {
                     </>
                 )}
             </motion.button>
-
-            {/* Status Messages */}
-            {/* <AnimatePresence>
-                {status === 'success' && (
-                    
-                )}
-            </AnimatePresence> */}
         </form>
     )
 }
